@@ -14,6 +14,7 @@ def main():
         user_input = int(input("Please enter an option: "))
         if user_input == 1:
             password = input("Please enter your password to be encode: ")
+            encoded_password = encoder(password)
             print("Your password has been encoded and stored!\n")
             print_menu()
             user_input = int(input("Please enter an option: "))
