@@ -9,7 +9,15 @@ def encoder(password):
         encoded += encoded_digit
     return encoded
 
+def decode(password):
+    decoded = ''
+    for i in password:
+        j = str((int(i) - 3))
+        decoded += j
+    return decoded
+
 def main():
+    global encoded_password
     while True:
         print_menu()
         user_input = int(input("Please enter an option: "))
@@ -21,7 +29,8 @@ def main():
             user_input = int(input("Please enter an option: "))
 
         if user_input == 2:
-            #decode()
+            decoded_pass = decode(encoded_password)
+            print(f'The encoded password is {encoded_password}, and the original password is {decoded_pass}.')
             print_menu()
             user_input = int(input("Please enter an option: "))
 
